@@ -2,3 +2,45 @@
 	margin: 0px;
 	padding: 0px;
 }
+
+div {
+	/*background-color: rgba(0, 0, 0, 0.05);*/
+}
+
+.navbar {
+	font-family: sans-serif;
+	height: 55px;
+	width: 100%;
+	position: fixed;
+}
+
+.navbar-link-container {
+	float: right;
+	margin-right: 25px;
+	margin-top: 15px;
+	color: white;
+}
+
+.navbar-link-container a {
+	margin-left: 18px;
+	font-size: 16pt;
+	cursor: pointer;
+}
+
+#hero-image {
+	width: 100%;
+}
+
+.hero-container {
+	max-height: 100vh;
+	min-height: 100vh;
+	width: 100%;
+	background-image: url("images/hero_image2.jpg");
+	background-size: cover;
+}
+
+.main-content {
+	background-color: #fefefe;
+	width: 100%;
+	min-height: 1000px;
+}
