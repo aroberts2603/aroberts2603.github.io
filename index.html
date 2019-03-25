@@ -5,22 +5,42 @@
 	<link rel="canonical" href="{{ site.url }}{{ page.url }}"/>
 	<meta name="viewport" content="initial-scale=1, width=device-width">
 	<title>Alex Roberts</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen">
 </head>
 <body>
+	<section id="hero-container">
+		<canvas id="hero-canvas"></canvas>
+		<div id="hero-text-container">
+			<h1>Alex Roberts</h1>
+			<h2>Student and Developer</h2>
+		</div>
+	</section>
+
 	<div class="navbar" id="navbar">
 		<div class="navbar-link-container" id="nlc">
 			<a>Contact</a>
-			<a>About</a>
 			<a>Projects</a>
+			<a>About</a>
 		</div>
 	</div>
 
-	<div class="hero-container"></div>
-
-	<div class="main-content">
-		
+	<div class="side-spacer-container">
+		<div class="side-spacer"></div>
+		<div class="main-content" id="contact">
+			<div class="contact-container">
+				<img src="images/github.svg" class="contact-svg">
+			</div>
+			<div class="contact-container">
+				<img src="images/phone.svg" class="contact-svg">
+			</div>
+			<div class="contact-container">
+				<img src="images/gmail.svg" class="contact-svg">
+			</div>
+		</div>
+		<div class="side-spacer"></div>
 	</div>
+	
 	
 <script type="text/javascript" src="main.js"></script>
 </body>
