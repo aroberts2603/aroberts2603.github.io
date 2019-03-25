@@ -30,7 +30,7 @@
 	max-height: 100vh;
 	min-height: 100vh;
 	width: 100%;
-	background-color: #303a49;
+	background-color: #292f38;
 }
 
 #hero-text-container h1 {
@@ -38,21 +38,27 @@
 	color: #f44336;
 	font-family: "Raleway";
 	letter-spacing: 4px;
-	padding-top: calc(50vh - 100px);
+	padding-top: 50vh;
+	text-shadow: 3px 3px #5c5c5c;
 }
 
 #hero-text-container h2 {
 	font-size: 20pt;
-	color: #4fc3f7;
+	/* color: #4fc3f7; */
+	/* text-shadow: 2px 2px #5c5c5c; */
+	color: white;
+	background-color: #4fc3f7;
+	display: inline-block;
 	font-family: "Raleway";
 	letter-spacing: 2px;
-	padding-left: 50px;
-	padding-top: 5px;
+	margin-left: 50px;
+	margin-top: 5px;
+	padding: 6px 12px;
 }
 
 #hero-text-container {
 	position: absolute;
-	left: 100px;
+	left: 80px;
 }
 
 #hero-canvas {

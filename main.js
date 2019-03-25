@@ -132,21 +132,21 @@ class Point {
 		if(this.y <= 0 || this.y >= window.innerHeight) {
 			this.ydir *= -1;
 		}
-		this.x += this.xdir/5;
-		this.y += this.ydir/5;
+		this.x += this.xdir/1.5;
+		this.y += this.ydir/1.5;
 	}
 }
 
 var points = [];
 function makePoints(number) {
 	for(var i = 0;i<number;i++) {
-		let p = new Point("#efefef", 3, Math.floor(Math.random() * window.innerWidth/20)*20, Math.floor(Math.random() * window.innerHeight/20)*20, Math.floor(Math.random() * 360));
+		let p = new Point("#efefef", 2, Math.floor(Math.random() * window.innerWidth/20)*20, Math.floor(Math.random() * window.innerHeight/20)*20, Math.floor(Math.random() * 360));
 		points.push(p);
 	}
 }
 
-var ctxObj = setupCanvas("hero-canvas");
-var ctx = ctxObj.ctx;
+// var ctxObj = setupCanvas("hero-canvas");
+// var ctx = ctxObj.ctx;
 
 function runPoints() {
 	ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
@@ -158,6 +158,90 @@ function runPoints() {
 
 
 
-makePoints(200);
+// makePoints(100);
 
-var run = setInterval(runPoints, 1000/60);
+// var run = setInterval(runPoints, 1000/60);
+
+class Planet {
+	constructor(orbitRadius,speed,angle,radius,color) {
+		this.orbitRadius = orbitRadius;
+		this.rotSpeed = speed;
+		this.currentAngle = angle;
+		this.radius = radius;
+		this.color = color;
+		this.x = Math.cos(this.currentAngle-this.rotSpeed)*this.orbitRadius;
+		this.y = Math.sin(this.currentAngle-this.rotSpeed)*this.orbitRadius;
+	}
+
+	move() {
+		if(this.currentAngle < 5*Math.PI/12 && this.orbitRadius < 800) {
+			this.currentAngle = 13*Math.PI/12;
+		} else if(this.currentAngle < Math.PI/2) {
+			this.currentAngle = Math.PI;
+		}
+		this.x = Math.cos(this.currentAngle-this.rotSpeed)*this.orbitRadius;
+		this.y = Math.sin(this.currentAngle-this.rotSpeed)*this.orbitRadius;
+		this.currentAngle -= this.rotSpeed;
+	}
+
+	display(ctx) {
+		ctx.beginPath();
+		ctx.fillStyle = this.color;
+		ctx.arc(document.body.clientWidth+this.x+125,this.y-125,this.radius,0,2*Math.PI);
+		ctx.fill();
+	}
+}
+
+function SolarSystem(ctx) {
+	ctx.fillStyle = "#ffe016";
+	ctx.strokeStyle = "#ffe016";
+	ctx.beginPath();
+	ctx.arc(document.body.clientWidth+125,-125,320,0,2*Math.PI);
+	ctx.fill();
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.strokeStyle = "#eaeaea";
+	ctx.arc(document.body.clientWidth+125,-125,380,0,2*Math.PI);
+	ctx.arc(document.body.clientWidth+125,-125,445,0,2*Math.PI);
+	ctx.arc(document.body.clientWidth+125,-125,525,0,2*Math.PI);
+	ctx.arc(document.body.clientWidth+125,-125,625,0,2*Math.PI);
+	ctx.arc(document.body.clientWidth+125,-125,870,0,2*Math.PI);
+	ctx.arc(document.body.clientWidth+125,-125,1050,0,2*Math.PI);
+	ctx.arc(document.body.clientWidth+125,-125,1230,0,2*Math.PI);
+	ctx.arc(document.body.clientWidth+125,-125,1400,0,2*Math.PI);
+	ctx.stroke();
+}
+
+var ctxObj = setupCanvas("hero-canvas");
+var ctx = ctxObj.ctx;
+
+var planets = [];
+let mercury = new Planet(380,Math.PI/1000,14*Math.PI/12,10,"#bababa");
+let venus = new Planet(445,Math.PI/1350,8*Math.PI/12,18,"#f7cc0e")
+let earth = new Planet(525,Math.PI/1600,11*Math.PI/12,30,"#1975ff");
+let mars = new Planet(625,Math.PI/2200,10*Math.PI/12,25,"#ff401e");
+
+let jupiter = new Planet(870,Math.PI/3000,10*Math.PI/12,85,"#ffd27f");
+let saturn = new Planet(1050,Math.PI/3300,11.5*Math.PI/12,70,"#ffdfa5");
+let uranus = new Planet(1230,Math.PI/3600,10*Math.PI/12,45,"#66d3ff");
+let neptune = new Planet(1400,Math.PI/4000,12*Math.PI/12,30,"#3586ff");
+
+planets.push(mercury);
+planets.push(venus);
+planets.push(earth);
+planets.push(mars);
+
+planets.push(jupiter);
+planets.push(saturn);
+planets.push(uranus);
+planets.push(neptune);
+
+function run() {
+	ctx.clearRect(0,0,document.body.clientWidth+60,document.body.clientHeight);
+	SolarSystem(ctx);
+	planets.forEach(function(element){
+		element.display(ctx);
+		element.move();
+	})
+}
+var run = setInterval(run, 1000/120);
