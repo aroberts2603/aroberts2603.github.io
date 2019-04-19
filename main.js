@@ -274,15 +274,15 @@ document.addEventListener("mousemove",function(e) {
 function sp() {
 	ctx.clearRect(0,0,ctxObj.width,ctxObj.height);
 	pointers.forEach(function(element) {
-		// element.update(ctx);
+		element.update(ctx);
 		element.display(ctx);
 	});
 	pointers.forEach(function(element) {
 		if(Math.sqrt((element.x-mx)**2 + (element.y-my)**2) <= 75) {
-			element.calcVel();
-			// element.spin();
+			// element.calcVel();
+			element.spin();
 		}
-		element.repulse();
+		// element.point(mx, my);
 	});
 }
 
