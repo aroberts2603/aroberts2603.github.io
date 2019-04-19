@@ -36,6 +36,10 @@ class Point {
 		//style
 		this.style = "255, 255, 255";
 		this.opacity = "1";
+
+		//variables for lines
+		this.isAccessible = true;
+		this.linesDrawn = 0;
 	}
 
 	update() {
@@ -108,18 +112,40 @@ for(var i = 0;i<110;i++) {
 	points.push(new Point());
 }
 
+// function linesForPoints(points) {
+// 	var dist, counter;
+// 	for(var i = 0;i<points.length;i++) {
+// 		counter = 0;
+// 		for(var j = 0;j<points.length && counter < 5;j++) {
+// 			if(i != j) {
+// 				dist = Math.sqrt((points[i].x - points[j].x)**2 + (points[i].y - points[j].y)**2)
+// 				if(dist <= 110) {
+// 					points[i].lineTo(points[j],ctx,dist);
+// 					counter++;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
 function linesForPoints(points) {
-	var dist;
 	for(var i = 0;i<points.length;i++) {
-		for(var j = 0;j<points.length;j++) {
-			if(i != j) {
-				dist = Math.sqrt((points[i].x - points[j].x)**2 + (points[i].y - points[j].y)**2)
+		for(var j = 0;j<points.length && points[i].linesDrawn < 5;j++) {
+			if(i != j && points[j].isAccessible) {
+				dist = Math.sqrt((points[i].x - points[j].x)**2 + (points[i].y - points[j].y)**2);
 				if(dist <= 110) {
 					points[i].lineTo(points[j],ctx,dist);
+					points[i].linesDrawn+=1;
+					points[j].linesDrawn+=1;
 				}
 			}
 		}
+		points[i].isAccessible = false;
 	}
+	points.forEach(function(p) {
+		p.isAccessible = true;
+		p.linesDrawn = 0;
+	})
 }
 
 var timeUntilDeath;

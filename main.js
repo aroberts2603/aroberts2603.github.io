@@ -286,4 +286,4 @@ function sp() {
 	});
 }
 
-var run = window.setInterval(sp, 1000/60);
+var run = window.setInterval(sp, 1000/30);
