@@ -16,11 +16,14 @@ function setupCanvas(htmlCanvasId) {
 var canvas = setupCanvas("hero-canvas");
 var ctx = r.ctx;
 
+var cw = canvas.width;
+var ch = canvas.height;
+
 class Point {
 	constructor() {
 		//essential variables
-		this.x = Math.floor(Math.random() * (1280-0)) + 0;
-		this.y = Math.floor(Math.random() * (578-0)) + 0;
+		this.x = Math.floor(Math.random() * (cw-0)) + 0;
+		this.y = Math.floor(Math.random() * (ch-0)) + 0;
 		this.velX = ((Math.random() * 3)-1.5)/2.0;
 		this.velY = ((Math.random() * 3)-1.5)/2.0;
 		
@@ -35,9 +38,9 @@ class Point {
 		this.opacity = "1";
 	}
 
-	update(time) {
-		if(this.x >= 1280) {
-			this.x = 1280;
+	update() {
+		if(this.x >= cw) {
+			this.x = cw;
 			if(this.velX > 0) {
 				this.velX *= -1;
 			}
@@ -48,15 +51,15 @@ class Point {
 			}
 		}
 
-		if(this.y >= 578) {
-			this.y = 578
+		if(this.y >= ch) {;
+			this.y = ch
 			if(this.velY > 0) {
-				this.velY *= -1
+				this.velY *= -1;
 			}
 		} else if(this.y <= 0) {
 			this.y = 0;
 			if(this.velY < 0) {
-				this.velY *= -1
+				this.velY *= -1;
 			}
 		}
 
@@ -101,8 +104,8 @@ var mx = 0;
 var my = 0;
 
 var points = [];
-for(var i = 0;i<150;i++) {
-	points.push(new Point);
+for(var i = 0;i<110;i++) {
+	points.push(new Point());
 }
 
 function linesForPoints(points) {
@@ -121,11 +124,10 @@ function linesForPoints(points) {
 
 var timeUntilDeath;
 function run() {
-	ctx.clearRect(0,0,1280,578);
-	var time = Date.now();
+	ctx.clearRect(0,0,cw,ch);
 	points.forEach(function(p) {
 		p.display(ctx);
-		p.update(time);
+		p.update();
 		if(Math.sqrt((p.x-mx)**2 + (p.y-my)**2) <= 75) {
 			p.push(mx, my);
 		} else {
