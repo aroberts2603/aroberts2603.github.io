@@ -114,7 +114,7 @@ var my = 0;
 var mouseDown
 
 var points = [];
-for(var i = 0;i<110;i++) {
+for(var i = 0;i<350;i++) {
 	points.push(new Point());
 }
 
