@@ -42,6 +42,7 @@
 	font-family: "Raleway";
 	letter-spacing: 4px;
 	padding-top: 50vh;
+	user-select: none;
 	/* text-shadow: 0px 0px 3px white; */
 }
 
