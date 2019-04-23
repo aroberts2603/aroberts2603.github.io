@@ -116,12 +116,7 @@ var my = 0;
 var mouseDown
 
 var points = [];
-<<<<<<< HEAD
-points.push(new Point(velX = 0, velY = 0, style = "0, 255, 0"));
-for(var i = 0;i<120;i++) {
-=======
 for(var i = 0;i<110;i++) {
->>>>>>> parent of 539df40... increased number of dots
 	points.push(new Point());
 }
 
