@@ -20,13 +20,12 @@ var cw = canvas.width;
 var ch = canvas.height;
 
 class Point {
-	constructor(velX = ((Math.random() * 3)-1.5)/2.0, velY = ((Math.random() * 3)-1.5)/2.0, style = "255, 255, 255") {
+	constructor() {
 		//essential variables
 		this.x = Math.floor(Math.random() * (cw-0)) + 0;
 		this.y = Math.floor(Math.random() * (ch-0)) + 0;
-		this.velX = velX;
-		this.velY = velY;
-		this.pointsForLines = [null, null, null, null, null];
+		this.velX = ((Math.random() * 3)-1.5)/2.0;
+		this.velY = ((Math.random() * 3)-1.5)/2.0;
 		
 		//push method
 		this.pushX = 0;
@@ -35,7 +34,7 @@ class Point {
 		this.targetPushY = 0;
 
 		//style
-		this.style = style;
+		this.style = "255, 255, 255";
 		this.opacity = "1";
 
 		//variables for lines
@@ -90,27 +89,32 @@ class Point {
 		ctx.fill();
 	}
 
-	lineTo(p,ctx) {
-		var dist = (this.x - p.x)**2 + (this.y - p.y)**2;
+	lineTo(p,ctx,dist) {
 		ctx.beginPath();
 		ctx.lineWidth = 0.5;
-		ctx.strokeStyle = "rgba("+this.style+", "+((dist-110)/-20)+")";
+		ctx.strokeStyle = "rgba("+this.style+", "+((dist-12100)/-400)+")";
 		ctx.moveTo(this.x,this.y);
 		ctx.lineTo(p.x,p.y);
 		ctx.stroke();
 	}
 
 	push(mx, my) {
-		this.targetPushX = ((this.x - mx)/20.0).toFixed(1);
-		this.targetPushY = ((this.y - my)/20.0).toFixed(1);
+		if(mouseDown) {
+			this.targetPushX = ((this.x - mx)/-10.0).toFixed(1);
+			this.targetPushY = ((this.y - my)/-10.0).toFixed(1);
+		} else {
+			this.targetPushX = ((this.x - mx)/20.0).toFixed(1);
+			this.targetPushY = ((this.y - my)/20.0).toFixed(1);
+		}
 	}
 }
 
 var mx = 0;
 var my = 0;
+var mouseDown
 
 var points = [];
-for(var i = 0;i<110;i++) {
+for(var i = 0;i<350;i++) {
 	points.push(new Point());
 }
 
@@ -130,54 +134,27 @@ for(var i = 0;i<110;i++) {
 // 	}
 // }
 
-function distSQ(point1, point2) {
-	return (point1.x - point2.x)**2 + (point1.y - point2.y)**2;
-}
-
 function linesForPoints(points) {
 	for(var i = 0;i<points.length;i++) {
-		for(var j = 0;points[i].pointsForLines.includes(null) && j<points.length;j++) {
+		for(var j = 0;j<points.length && points[i].linesDrawn < 5;j++) {
 			if(i != j && points[j].isAccessible) {
-				dist = Math.sqrt((points[i].x - points[j].x)**2 + (points[i].y - points[j].y)**2);
-				if(dist <= 110) {
+				dist = (points[i].x - points[j].x)**2 + (points[i].y - points[j].y)**2;
+				if(dist <= 12100) { //12100 is 110 squared
 					points[i].lineTo(points[j],ctx,dist);
 					points[i].linesDrawn+=1;
 					points[j].linesDrawn+=1;
 				}
 			}
-		}		
+		}
 		points[i].isAccessible = false;
 	}
 	points.forEach(function(p) {
 		p.isAccessible = true;
-		for(var i = 0;i<p.pointsForLines.length;i++) {
-			if(p.pointsForLines[i] != null) {
-				if(distSQ(p,p.pointsForLines[i]) > 20100) {
-					p.pointsForLines[i] = null;
-				}
-			}
-		}
-	})
-
-	points.forEach(function(p) {
-		p.pointsForLines.forEach(function(e) {
-			if(e != null) {
-				p.lineTo(e,ctx);
-			}
-		})
+		p.linesDrawn = 0;
 	})
 }
 
-function unNamedFunction() {
-	for(var i = 0;i<points.length;i++) {
-		for(var j = 0;j<points[i].pointsForLines.length && points[i].pointsForLines.includes(null);j++) {
-			if(i != j && points[j].isAccessible) {
-
-			}
-		}
-	}
-}
-
+var timeUntilDeath;
 function run() {
 	ctx.clearRect(0,0,cw,ch);
 	points.forEach(function(p) {
@@ -200,10 +177,17 @@ document.addEventListener("mousemove", function(e) {
 	my = e.clientY;
 })
 
+document.addEventListener("mousedown", function(e) {
+	mouseDown = true;
+})
+
+document.addEventListener("mouseup", function(e) {
+	mouseDown = false;
+})
+
 // document.addEventListener("mousemove", function(e) {
 // 	var angle = Math.atan((e.clientY-(canvas.height/2))/(e.clientX-(canvas.width/2)));
 // 	angle = angle/Math.PI*180;
 // 	angle -= 90
 // 	document.getElementById("hero-container").style.backgroundImage = "linear-gradient("+angle+"deg, #ff0550, #ff562c)";
-// 	console.log("oof");
 // })
