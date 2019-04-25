@@ -43,6 +43,7 @@
 	letter-spacing: 4px;
 	padding-top: 50vh;
 	/* text-shadow: 0px 0px 3px white; */
+	user-select: none;
 }
 
 #hero-text-container h2 {
