@@ -36,7 +36,7 @@ div {
 
 #main-page {
     display: grid;
-    grid-template-columns: 200px 1fr 200px;
+    grid-template-columns: 17% 1fr 17%;
 }
 
 #content {
@@ -48,3 +48,4 @@ div {
     font-size: 30pt;
     text-align: center;
 }
+
