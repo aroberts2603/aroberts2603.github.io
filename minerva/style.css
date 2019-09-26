@@ -42,7 +42,7 @@ div {
 
 #main-page {
     display: grid;
-    grid-template-columns: 17% 1fr 17%;
+    grid-template-columns: 17% 66% 17%;
     background-color: #e6e6e6;
 }
 
