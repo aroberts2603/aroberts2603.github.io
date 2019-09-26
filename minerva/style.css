@@ -103,3 +103,13 @@ div {
 #Alex {
     color: #ff5f59;
 }
+
+#logo {
+    width: 600px;
+}
+
+#logo-container {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
