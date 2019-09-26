@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+div {
+    /* background-color: rgba(0,0,0,0.07); */
+}
+
+#navigation-bar {
+    height: 55px;
+    display: inline-block;
+    width: 100%;
+}
+
+#pages-container {
+    font-family: sans-serif;
+    font-size: 16pt;
+    padding-top: 15px;
+    float: right;
+    padding-right: 55px;
+}
+
+#pages-container a {
+    padding-right: 16px;
+}
+
+
+
+#hero {
+    height: 200px;
+}
+
+
+
+#main-page {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+}
+
+#content {
+    height: 300px;
+}
+
+#content h1 {
+    color: #ff5c59;
+    font-size: 30pt;
+    text-align: center;
+}
