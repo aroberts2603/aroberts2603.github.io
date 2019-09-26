@@ -33,8 +33,9 @@ div {
 
 
 #hero {
-    /* height: 200px; */
-    display: none;
+    height: 480px;
+    /* display: none; */
+
 }
 
 
@@ -53,7 +54,7 @@ div {
 }
 
 #content h1 {
-    color: #ff5c59;
+    color: #1cb3ff;
     font-size: 30pt;
     text-align: center;
     padding-top: 70px;
@@ -81,4 +82,24 @@ div {
 
 #citations p {
     padding-top: 20px;
+}
+
+#title {
+    font-size: 30pt;
+    margin-left: 340px;
+    margin-top: 100px;
+}
+
+#subtitle {
+    margin-left: 380px;
+}
+
+#minerva {
+    font-family: "consolas";
+    font-size: 34pt;
+    color: #1cb3ff;
+}
+
+#Alex {
+    color: #ff5f59;
 }
