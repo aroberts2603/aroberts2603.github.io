@@ -8,12 +8,19 @@ div {
     /* background-color: rgba(0,0,0,0.07); */
 }
 
+#nav-bar-spacer {
+    height: 55px;
+}
+
 #navigation-bar {
     height: 55px;
     display: inline-block;
     width: 100%;
     background-color: #404040;
     margin-bottom: -4px;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
 }
 
 #pages-container {
@@ -29,16 +36,6 @@ div {
     text-decoration: none;
     color: white;
 }
-
-
-
-#hero {
-    height: 480px;
-    /* display: none; */
-
-}
-
-
 
 #main-page {
     display: grid;
@@ -85,24 +82,33 @@ div {
 }
 
 #title {
+    margin-left: 160px;
     font-size: 30pt;
-    margin-left: 340px;
-    margin-top: 100px;
-}
-
-#subtitle {
-    margin-left: 380px;
+    margin-top: 0px;
+    letter-spacing: 2px;
 }
 
 #minerva {
     font-family: "consolas";
-    font-size: 34pt;
+    font-size: 60pt;
     color: #1cb3ff;
+    padding-left: 200px;
+    padding-top: 160px;
 }
 
-#Alex {
-    color: #ff5f59;
+#hero {
+    height: 530px;
 }
+
+#pages-container {
+    font-size: 15pt;
+    padding-top: 17px;
+    padding-right: 10px;
+}
+
+/* #Alex {
+    color: #ff5f59;
+} */
 
 #logo {
     width: 600px;
@@ -113,3 +119,60 @@ div {
     margin-top: 40px;
     margin-bottom: 20px;
 }
+
+@media only screen and (min-width: 1920px) {
+    #content {
+        
+    }
+}
+
+#timelines-container div img {
+    width: 100%;
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1919px) {
+    #title {
+        margin-left: 160px;
+        font-size: 30pt;
+        margin-top: 0px;
+        letter-spacing: 2px;
+        color: white;
+    }
+
+    #minerva {
+        font-family: "consolas";
+        font-size: 60pt;
+        color: #1cb3ff;
+        padding-left: 200px;
+        padding-top: 160px;
+    }
+    
+    #hero {
+        height: 530px;
+        /* background-color: red; */
+        /* background-image: url("images/landing1.png"); */
+    }
+
+    #pages-container {
+        font-size: 15pt;
+        padding-top: 17px;
+        padding-right: 10px;
+    }
+}
+
+#bg-code {
+    position: absolute;
+    top: 55px;
+    height: 530px;
+    /* filter: blur(10px); */
+    z-index: -1;
+}
+
+/* 
+#hero-canvas {
+    width: 100%;
+    height: 530px;
+    position: absolute;
+    top: 55px;
+    z-index: 0;
+} */
