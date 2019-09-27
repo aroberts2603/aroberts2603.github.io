@@ -16,7 +16,7 @@ div {
     height: 55px;
     display: inline-block;
     width: 100%;
-    background-color: #404040;
+    background-color: #202020;
     margin-bottom: -4px;
     position: fixed;
     top: 0px;
@@ -151,6 +151,7 @@ div {
         height: 530px;
         /* background-color: red; */
         /* background-image: url("images/landing1.png"); */
+        overflow: hidden;
     }
 
     #pages-container {
@@ -163,9 +164,13 @@ div {
 #bg-code {
     position: absolute;
     top: 55px;
-    height: 530px;
-    /* filter: blur(10px); */
+    /* height: 530px; */
+    filter: blur(5px);
     z-index: -1;
+    width: 105%;
+    margin-left: -10px;
+    margin-top: -10px;
+    overflow: hidden;
 }
 
 /* 
@@ -176,3 +181,7 @@ div {
     top: 55px;
     z-index: 0;
 } */
+
+body {
+    overflow-x: hidden;
+}
