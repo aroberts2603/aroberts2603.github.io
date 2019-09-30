@@ -13,7 +13,7 @@
 }
 
 #title {
-    margin-left: 160px;
+    margin-left: 30px;
     font-size: 30pt;
     margin-top: 0px;
     letter-spacing: 2px;
@@ -24,8 +24,8 @@
     font-family: "consolas";
     font-size: 60pt;
     color: #1cb3ff;
-    padding-left: 200px;
-    padding-top: 160px;
+    margin-left: 180px;
+    margin-top: 160px;
 }
 
 #hero {
@@ -120,8 +120,8 @@ body {
 #githubs {
     display: inline-block;
     position: absolute;
-    top: 170px;
-    right: 170px;
+    top: 75px;
+    right: 60px;
 }
 
 .git-link {
@@ -130,14 +130,18 @@ body {
     border-radius: 8px;
     /* border: 2px solid white; */
     margin-bottom: 10px;
-    font-size: 12pt;
+    font-size: 11pt;
     text-align: center;
     color: #333;
     min-width: 120px;
+    transition-property: "background-color", "color";
+    transition-duration: 0.3s;
 }
 
 .git-link:hover {
     cursor: pointer;
+    background-color: #1cb3ff;
+    color: black;
 }
 
 #githubs a {
@@ -149,6 +153,7 @@ body {
     padding: 4px 18px;
     color: white;
     margin-left: 35px;
+    font-size: 22pt;
 }
 
 .nice-hr {
@@ -158,6 +163,19 @@ body {
 
 .git-container {
     padding: 0px 12px;
+}
+
+#tagline {
+    color: white;
+    margin-top: 10px;
+    max-width: 650px;
+    margin-left: 160px;
+}
+
+#main-hr {
+    width: 840px;
+    margin-left: 110px;
+    margin-top: -4px;
 }
 
 @media only screen and (min-width: 1920px) {
@@ -177,7 +195,7 @@ body {
 
 @media only screen and (min-width: 900px) and (max-width: 1919px) {
     #title {
-        margin-left: 160px;
+        margin-left: 30px;
         font-size: 30pt;
         margin-top: 0px;
         letter-spacing: 2px;
@@ -186,10 +204,10 @@ body {
 
     #name {
         font-family: "consolas";
-        font-size: 60pt;
+        font-size: 70pt;
         color: #1cb3ff;
-        padding-left: 200px;
-        padding-top: 160px;
+        margin-left: 140px;
+        margin-top: 160px;
     }
     
     #hero {
