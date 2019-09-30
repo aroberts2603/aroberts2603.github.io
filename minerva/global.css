@@ -1,0 +1,75 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+/* =============================================== */
+/* =                   Navbar                    = */
+/* =============================================== */
+
+#navbar-spacer {
+    height: 55px;
+}
+
+#navbar {
+    height: 55px;
+    display: inline-block;
+    width: 100%;
+    background-color: #202020;
+    margin-bottom: -4px;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+}
+
+#nav-links {
+    font-family: sans-serif;
+    font-size: 16pt;
+    padding-top: 15px;
+    float: right;
+    padding-right: 40px;
+}
+
+#nav-links a {
+    padding-right: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+/* =============================================== */
+/* =                   Content                   = */
+/* =============================================== */
+
+#main-page {
+    display: grid;
+    grid-template-columns: 14% 72% 14%;
+    background-color: #white;
+}
+
+#content {
+    padding: 0px 75px;
+    /* box-shadow: 0px 5px 5px rgba(0,0,0,0.5); */
+    background-color: white;
+    padding-bottom: 60px;
+}
+
+#content h1 {
+    color: #1cb3ff;
+    font-size: 30pt;
+    text-align: center;
+    padding-top: 70px;
+}
+
+#content h2 {
+    padding-top: 28px;
+}
+
+#content p {
+    padding-top: 8px;
+}
+
+.format-break {
+    margin: 15px -30px;
+    border: 1px solid #1cb3ff;
+}
