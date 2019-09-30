@@ -20,7 +20,7 @@
     color: white;
 }
 
-#minerva {
+#name {
     font-family: "consolas";
     font-size: 60pt;
     color: #1cb3ff;
@@ -29,7 +29,8 @@
 }
 
 #hero {
-    height: 530px;
+    margin-top: 55px;
+    height: calc(100vh - 55px);
 }
 
 #pages-container {
@@ -52,45 +53,8 @@
     margin-bottom: 20px;
 }
 
-@media only screen and (min-width: 1920px) {
-    #content {
-        
-    }
-}
-
 #timelines-container div img {
     width: 100%;
-}
-
-@media only screen and (min-width: 900px) and (max-width: 1919px) {
-    #title {
-        margin-left: 160px;
-        font-size: 30pt;
-        margin-top: 0px;
-        letter-spacing: 2px;
-        color: white;
-    }
-
-    #minerva {
-        font-family: "consolas";
-        font-size: 60pt;
-        color: #1cb3ff;
-        padding-left: 200px;
-        padding-top: 160px;
-    }
-    
-    #hero {
-        height: 530px;
-        /* background-color: red; */
-        /* background-image: url("images/landing1.png"); */
-        overflow: hidden;
-    }
-
-    #pages-container {
-        font-size: 15pt;
-        padding-top: 17px;
-        padding-right: 10px;
-    }
 }
 
 #bg-code {
@@ -124,4 +88,117 @@ body {
 
 #right-spacer {
     background-color: white;
+}
+
+#github-svg {
+    float: left;
+    width: 30px;
+    margin-top: 6px;
+    margin-left: 8px;
+    margin-right: -8px;
+}
+
+#minn-git {
+    float: left;
+    width: 30px;
+    margin-top: 7px;
+    margin-right: 12px;
+}
+
+#website-git {
+    float: left;
+    width: 30px;
+    margin-top: 4px;
+    margin-right: 12px;
+}
+
+.git-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+#githubs {
+    display: inline-block;
+    position: absolute;
+    top: 170px;
+    right: 170px;
+}
+
+.git-link {
+    padding: 9px 16px;
+    background-color: white;
+    border-radius: 8px;
+    /* border: 2px solid white; */
+    margin-bottom: 10px;
+    font-size: 12pt;
+    text-align: center;
+    color: #333;
+    min-width: 120px;
+}
+
+.git-link:hover {
+    cursor: pointer;
+}
+
+#githubs a {
+    text-decoration: none;
+    color: #333;
+}
+
+#git-text {
+    padding: 4px 18px;
+    color: white;
+    margin-left: 35px;
+}
+
+.nice-hr {
+    border: 1px solid #1cb3ff;
+    margin-bottom: 11px;
+}
+
+.git-container {
+    padding: 0px 12px;
+}
+
+@media only screen and (min-width: 1920px) {
+    #githubs {
+        transform: scale(1.4);
+        top: 250px;
+    }
+
+    #name {
+        font-size: 110pt;
+    }
+
+    #title {
+        font-size: 40pt;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1919px) {
+    #title {
+        margin-left: 160px;
+        font-size: 30pt;
+        margin-top: 0px;
+        letter-spacing: 2px;
+        color: white;
+    }
+
+    #name {
+        font-family: "consolas";
+        font-size: 60pt;
+        color: #1cb3ff;
+        padding-left: 200px;
+        padding-top: 160px;
+    }
+    
+    #hero {
+        overflow: hidden;
+    }
+
+    #pages-container {
+        font-size: 15pt;
+        padding-top: 17px;
+        padding-right: 10px;
+    }
 }
