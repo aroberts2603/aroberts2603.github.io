@@ -23,7 +23,7 @@
 #name {
     font-family: "consolas";
     font-size: 60pt;
-    color: #1cb3ff;
+    color: var(--blue);
     margin-left: 180px;
     margin-top: 160px;
 }
@@ -140,7 +140,7 @@ body {
 
 .git-link:hover {
     cursor: pointer;
-    background-color: #1cb3ff;
+    background-color: var(--blue);
     color: black;
 }
 
@@ -157,7 +157,7 @@ body {
 }
 
 .nice-hr {
-    border: 1px solid #1cb3ff;
+    border: 1px solid var(--blue);
     margin-bottom: 11px;
 }
 
@@ -205,7 +205,7 @@ body {
     #name {
         font-family: "consolas";
         font-size: 70pt;
-        color: #1cb3ff;
+        color: var(--blue);
         margin-left: 140px;
         margin-top: 160px;
     }
@@ -220,3 +220,149 @@ body {
         padding-right: 10px;
     }
 }
+
+#main-page {
+    /* display: none; */
+}
+
+#test-page {
+    background-color: white;
+    padding: 1px 7% 30px 7%;
+}
+
+#columns {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    /* column-gap: 20px; */
+}
+
+#columns div {
+    /* border-right: 1px solid #333; */
+}
+
+#left-col {
+    padding: 0% 4%;
+    /* border-right: 2px solid #333; */
+}
+
+#right-col {
+    padding: 0% 4%;
+}
+
+.ele {
+    padding: 16px 14px;
+    text-align: center;
+    /* transform: scale(1.1); */
+    /* transition-property: "transform"; */
+    /* transition-duration: 0.35s; */
+    /* transition-timing-function: ease; */
+}
+
+.image-container {
+    padding: 16px 14px;
+    text-align: center;
+}
+
+.image-container img {
+    width: 180px;
+}
+
+.ele-header {
+    text-align: center;
+    color: var(--blue);
+}
+
+.ele-text {
+    color: #333;
+    margin-top: 14px;
+    line-height: 1.4;
+    /* font-size: 16pt; */
+}
+
+.ele-hr {
+    border: 1px solid #333;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#c-logo {
+    width: 110px;
+    margin-right: 80px;
+}
+
+#github-logo {
+    width: 100px;
+}
+
+#intellij-logo {
+    width: 100px;
+    margin-right: 36px;
+    margin-left: 36px;
+}
+
+#vscode-logo {
+    width: 100px;
+}
+
+.left {
+    border-right: 1px solid #333;
+    padding-right: 46px;
+}
+
+.right {
+    border-left: 1px solid #333;
+    padding-left: 46px;
+}
+
+.content-hr {
+    border: 1px solid #333;
+    border-radius: 2px;
+    margin-bottom: 40px;
+}
+
+#scanner-image {
+    width: 440px;
+    margin-top: 12px;
+}
+
+#logo-explanation {
+    width: 410px;
+    margin-top: 20px;
+}
+
+#proj-objs p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#java-logo {
+    width: 80px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    font-size: 32pt;
+    color: #333;
+}
+
+#goals {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: #333;
+    text-align: center;
+}
+
+.goal-entry {
+    padding: 4px;
+}
+
+.goal-header {
+    color: var(--blue)
+}
+/* 
+#timelines-container div {
+    max-width: 680px;
+} */

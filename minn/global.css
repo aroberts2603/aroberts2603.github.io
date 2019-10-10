@@ -1,7 +1,13 @@
+:root {
+    /* --blue: #3590FF; */
+    --blue: #3e9af0;
+}
+
 * {
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* =============================================== */
@@ -54,13 +60,6 @@
     padding-bottom: 60px;
 }
 
-#content h1 {
-    color: #1cb3ff;
-    font-size: 30pt;
-    text-align: center;
-    padding-top: 70px;
-}
-
 #content h2 {
     padding-top: 28px;
 }
@@ -71,5 +70,5 @@
 
 .format-break {
     margin: 15px -30px;
-    border: 1px solid #1cb3ff;
+    border: 1px solid var(--blue);
 }

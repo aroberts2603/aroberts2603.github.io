@@ -11,7 +11,7 @@
     <div id="navbar">
         <div id="nav-links">
             <a href="#the-project">The Project</a>
-            <a href="#goals">Goals</a>
+            <a href="#weekly-goals">Goals</a>
             <a href="#journals">Journals</a>
             <a href="#advisors">Advisors</a>
             <a href="#timeline">Timeline</a>
@@ -19,20 +19,15 @@
         </div>
     </div>
 
-    <!-- <div id="navbar-spacer"></div> -->
-
     <div id="hero">
         <h1 id="name">Minn<span id="title">A Programming Language</span></h1>
-        <!-- <h1 id="title">A Programming Language</h2> -->
         <hr id="main-hr">
         <p id="tagline">Fast, lightweight, and educational. Minn is designed to be a powerful prototyping language with C-family syntax to teach people about programming realistically.</p>
         <video id="bg-code">
             <source src="images/background-code.webm" type="video/webm">
         </video>
-        <!-- <canvas id="hero-canvas"></canvas> -->
         <div id="githubs">
             <div class="git-container">
-                <!-- <img src="images/github.svg" id="github-svg"> -->
                 <h1 id="git-text">Repos</h1>
             </div>
             <hr class="nice-hr">
@@ -47,43 +42,79 @@
         </div>
     </div>
 
-    <div id="main-page">
-        <div id="left-spacer"></div>
-        <div id="content">
-            <h1 id="the-project">The Project Proposal</h1>
+    <div id="test-page">
+        <div id="the-project"></div>
+        <h1 class="subtitle">Project Overview</h1>
 
-            <h2>Project Description</h2>
-            <p>My project is creating a fast, lightweight, and educational prototyping programming language with C like syntax. Its purpose is to allow simple testing of important programming concepts with documentation to help explain them, or just be used as a prototyping language closer to C and Java in style.</p>
-
-            <h2>Research Requirements</h2>
-            <p>I will have to research further into programming language concepts such as inheritance, scope, classes, and more to be able to implement them into my language. Additionally I’ll research things like regular expressions, scanning, parsing, and interpreting to build my language. The optimization of my programming language will be a time sink if I finish everything else early, with lots of available research and improvement.</p>
-
-            <h2>Technology Needed</h2>
-            <p>Technology I’ll learn to use includes the IDE IntelliJ to program my project and Git as version control system. I plan to have a website dedicated to my language containing file downloads, code examples, and documentation.</p>
-
-            <h2>Final Presentation</h2>
-            <p>My presentation will talk about the basic things necessary to build a language, a tour of my website, and examples of documentation. During my presentation I’ll do a side by side comparison of a simple program such as a calculator in multiple languages (for example, Java, C/C++, my language, and Python) to show where it stands between them to highlight benefits of my language and acknowledge drawbacks. We’ll know if my project is a success if simple programs can be written quickly by new programmers using the support my website provides. To test this, I’ll have an interactive segment of my presentation where someone with little to no programming experience can download my language and write a “hello world” program using my documentation in 5 minutes or less.</p>
-
-            <h2>Project Objectives</h2>
-            <ul>
-                <li>Greatly improve my mastery of Java and C/C++ programming languages</li>
-                <li>Vastly increase my knowledge of the anatomy and design of programming languages</li>
-                <li>Gain a better understanding of the computer science career path to help me decide if I want to pursue it as a career</li>
-                <li>Improve communication skills, especially while explaining abstract or complicated programming concepts</li>
-                <li>Develop more efficient time management and planning skills while working on long term projects with few deadlines</li>
-            </ul>
-
-            <h1>My Logo</h1>
-            <div id="logo-container">
-                <img src="images/minn_logo.png" id="logo">
+        <div id="columns">
+            <div id="left-1" class="ele left">
+                <h1 class="ele-header">Project Description</h1>
+                <p class="ele-text">I plan to create a lightweight and educational programming language with C-family syntax used for prototyping applications and learning programming concepts. I plan to use Java and C to make my scanner, parser, and interpreter.</p>
             </div>
 
-            <div id="logo-explanation">
-                <p>My logo is in theme with many other programming language logos by being tied to the name (like Ruby, Python, C/C++, and Java), so I decided on an interseting looking "M". The name Minn comes from the Roman god of wisdom, education, and strategy Minerva. The color blue represents intelligence and learning while dark gray is a very modern and sharp color - I want my programming language to be well designed and educational. The font for the text is consolas, one of the most common fonts used in programming IDEs and text editors. Finally, I use brackets and a semicolon to relate back to my project of programming.</p>
+            <div class="image-container right">
+                <img src="images/logos/c.png" id="c-logo">
+                <img src="images/logos/java.png" id="java-logo">
             </div>
-            
 
-            <h1 id="advisors">Advisors</h1>
+            <div class="image-container left">
+                <hr class="content-hr">
+                <img src="images/logos/github.png" id="github-logo">
+                <img src="images/logos/intellij.png" id="intellij-logo">
+                <img src="images/logos/vscode.png" id="vscode-logo">
+            </div>
+
+            <div id="left-2" class="ele right">
+                <hr class="content-hr">
+                <h1 class="ele-header">Technology Needed</h1>
+                <p class="ele-text">Github - VCS, code sharing, and website hosting<br>IntelliJ - main IDE and project manager for Java/C<br>VS Code - simpler editor for prototyping and website work</p>
+            </div>
+
+            <div id="left-3" class="ele left">
+                <hr class="content-hr">
+                <h1 class="ele-header">Project Objectives</h1>
+                <div class="ele-text" id="proj-objs">
+                    <p>- Greatly improve mastery of C-familiy languages</p><br>
+                    <p>- Learn about the anatomy/design of programming languages</p><br>
+                    <p>- Help me decide if I want to pursue CS as a career</p><br>
+                    <p>- Improve communication skills related to technical topics</p><br>
+                    <p>- Develop efficient time management and planning skills for long term projects</p>
+                </div>
+            </div>
+
+            <div class="image-container right">
+                <hr class="content-hr">
+                <img src="images/">
+            </div>
+
+            <div class="image-container left">
+                <hr class="content-hr">
+                <img src="images/scanner.png" id="scanner-image">
+            </div>
+
+            <div class="ele right">
+                <hr class="content-hr">
+                <h1 class="ele-header">Areas of Reseach</h1>
+                <p class="ele-text">Programming language concepts (scope, classes, variables, etc.)<br>Niche syntax and the programming language pipeline (i.e. RegEx, scanners, parsers, and interpreters)</p>
+            </div>
+
+            <div class="ele left">
+                <hr class="content-hr">
+                <h1 class="ele-header">Final Presentation</h1>
+                <p class="ele-text">My final presentation will talk about the basic things necessary to build a language, a tour of my website, and examples of documentation.<br><br>During my presentation I’ll do a side by side comparison of a simple program such as a calculator in multiple languages (for example, Java, C/C++, my language, and Python) to show where it stands between them to highlight benefits of my language and acknowledge drawbacks.<br><br>We’ll know if my project is a success if simple programs can be written quickly by new programmers using the support my website provides. To test this, I’ll have an interactive segment of my presentation where someone with little to no programming experience can download my language and write a “hello world” program using my documentation in 5 minutes or less.</p>
+            </div>
+
+            <div class="ele right">
+                <hr class="content-hr">
+                <h1 class="ele-header">My Logo</h1>
+                <img id="logo-explanation" src="images/minn_logo.png">
+                <p class="ele-text">My logo is in theme with many other programming language logos by being tied to the name (like Ruby, Python, and Java), so I decided on an interseting looking "M".<br><br>The name Minn comes from the Roman god of wisdom, education, and strategy Minerva. The color blue represents intelligence and learning while dark gray is a very modern color. Finally, I use the font consolas, brackets, and a semicolon to relate back to my programming themed project.</p>
+            </div>
+        </div>
+
+        <div id="advisors"></div>
+        <div id="advisors-container">
+            <h1 id="advisor-title" class="subtitle">Advisors</h1>
 
             <h2><span class="advisor-name">Lorin Jurow</span> - Expert Advisor</h2>
             <ul>
@@ -108,14 +139,27 @@
             <ul>
                 <li>My parents, will critique writing and formal language</li>
             </ul>
+        </div>
 
-            <h1 id="timeline">Timeline</h1>
-            <div id="timelines-container">
-                <!-- <h2>September - <span>Show</span></h2> -->
-                <div class="image-hider">
-                    <img src="images/timeline/0_Sep.PNG">
-                </div>
-                
+        <div id="weekly-goals"></div>
+        <h1 class="subtitle">Weekly Goals</h1>
+        
+        <div id="goals">
+            <div id="week-1-goals" class="goal-entry">
+                <h2 class="goal-header">Week of 10/8 Goals</h2>
+                <p>- Research and understand the basic parts of a language</p>
+                <p>- Learn how to use IntelliJ on a basic level</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-page">
+        <div id="left-spacer"></div>
+        <div id="content">            
+
+        <div id="timeline"></div>
+        <h1 class="subtitle" id="timeline-title">Timeline</h1>
+            <div id="timelines-container">                
                 <!-- <h2>September - <span>Show</span></h2> -->
                 <div class="image-hider">
                     <img src="images/timeline/1_Oct.PNG">
@@ -150,7 +194,7 @@
                 <div class="image-hider">
                     <img src="images/timeline/7_Apr.PNG">
                 </div>
-            </div>
+            <!-- </div> -->
 
             <h1 id="bibliography">Bibliography</h1>
             <div id="citations">
@@ -174,18 +218,10 @@
                     
                 <p>U.S. Bureau of Labor Statistics. “Software Developers : Occupational Outlook Handbook.” U.S. Bureau of Labor Statistics, U.S. Bureau of Labor Statistics, <a target="_blank" href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm">https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm</a>.</p>
             </div>
-            
-            <h1 id="goals">Weekly Goals</h1>
-            <p>Under Construction</p>
-
-            <h1 id="journals">Journals</h1>
-            <p>Under Construction</p>
-
-        </div>
+                    </div>
         <div id="right-spacer"></div>
     </div>
 
     <script src="main.js"></script>
-    <!-- <script src="dots_and_lines.js"></script> -->
 </body>
 </html>
