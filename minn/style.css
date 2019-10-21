@@ -23,9 +23,10 @@
 #name {
     font-family: "consolas";
     font-size: 60pt;
-    color: var(--blue);
+    /* color: var(--blue); */
     margin-left: 180px;
     margin-top: 160px;
+    color: white;
 }
 
 #hero {
@@ -61,11 +62,11 @@
     position: absolute;
     top: 55px;
     /* height: 530px; */
-    filter: blur(5px);
+    /* filter: blur(5px); */
     z-index: -1;
     width: 105%;
     margin-left: -10px;
-    margin-top: -30px;
+    margin-top: -60px;
     overflow: hidden;
 }
 
@@ -152,7 +153,7 @@ body {
 #git-text {
     padding: 4px 18px;
     color: white;
-    margin-left: 35px;
+    margin-left: 25px;
     font-size: 22pt;
 }
 
@@ -167,9 +168,10 @@ body {
 
 #tagline {
     color: white;
-    margin-top: 10px;
-    max-width: 650px;
-    margin-left: 160px;
+    margin-top: 30px;
+    max-width: 900px;
+    margin-left: 18%;
+    font-size: 16pt;
 }
 
 #main-hr {
@@ -205,7 +207,7 @@ body {
     #name {
         font-family: "consolas";
         font-size: 70pt;
-        color: var(--blue);
+        /* color: var(--blue); */
         margin-left: 140px;
         margin-top: 160px;
     }
@@ -350,19 +352,38 @@ body {
 
 #goals {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 44% 44%;
+    column-gap: 12%;
     color: #333;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .goal-entry {
     padding: 4px;
 }
 
+.goal-entry p {
+    margin-top: 14px;
+}
+
 .goal-header {
-    color: var(--blue)
+    color: var(--blue);
+    text-align: center;
 }
 /* 
 #timelines-container div {
     max-width: 680px;
 } */
+
+h1 {
+    font-family: 'Raleway';
+    letter-spacing: 2px;
+    font-weight: bold;
+    
+}
+
+#hero-logo {
+    width: 35%;
+    margin-left: 22%;
+    margin-top: 220px;
+}

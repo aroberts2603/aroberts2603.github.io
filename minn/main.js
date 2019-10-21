@@ -4,7 +4,7 @@ document.addEventListener("scroll", function(e) {
 })
 
 function parallax(value) {
-    var para = (value*-0.17)-30;
+    var para = (value*-0.29)-60;
     document.getElementById("bg-code").style.marginTop = para+"px";
 }
 
