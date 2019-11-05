@@ -1,0 +1,58 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 800px;
+}
+
+.sidebar {
+    background-color: #333;
+    display: inline-block;
+    position: fixed;
+    height: 100vh;
+    font-family: sans-serif;
+    color: white;
+}
+
+.sidebar h2 {
+    color: #3e9af0;
+    font-size: 22pt;
+    padding-bottom: 2px;
+}
+
+.sidebar p a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 16pt;
+    line-height: 1.5;
+    transition: color 0.2s;
+}
+
+.sidebar p a:hover {
+    color: #aaaaaa;
+}
+
+#project-links {
+    padding: 20px 60px;
+    white-space: nowrap;
+    margin-top: 20px;
+}
+
+#language-links {
+    padding: 20px 60px;
+    white-space: nowrap;
+}
+
+#sidebar-container {
+    /* display: none; */
+    width: 60px;
+    transition: width 0.5s;
+    overflow: hidden;
+}
+
+#sidebar-container:hover {
+    width: 330px;
+}
