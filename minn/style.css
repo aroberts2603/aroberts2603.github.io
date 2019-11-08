@@ -99,6 +99,16 @@ body {
     margin-right: -8px;
 }
 
+#communication-image {
+    width: 160px;
+    margin-top: 40px;
+}
+
+#timemanagement-image {
+    width: 160px;
+    margin-left: 60px;
+}
+
 #minn-git {
     float: left;
     width: 30px;
