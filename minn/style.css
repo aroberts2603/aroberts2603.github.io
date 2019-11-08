@@ -387,3 +387,27 @@ h1 {
     margin-left: 22%;
     margin-top: 220px;
 }
+
+.journal-title {
+    color: var(--blue);
+}
+
+.journal-subtitle {
+    color: var(--blue);
+}
+
+.journal-list {
+    margin-left: 35px;
+}
+
+.journal {
+    max-width: 1000px;
+    margin-left: calc(50% - 500px);
+}
+
+#enum-example {
+    width: 600px;
+    margin-left: calc(50% - 300px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
