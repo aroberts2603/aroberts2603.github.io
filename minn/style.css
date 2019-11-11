@@ -1,8 +1,5 @@
 @import url("global.css");
 
-#timelines-container {
-    text-align: center;
-}
 
 #citations {
     padding: 0px 20px;
@@ -242,13 +239,7 @@ body {
     padding: 1px 7% 30px 7%;
 }
 
-.subtitle {
-    text-align: center;
-    margin-top: 45px;
-    margin-bottom: 45px;
-    font-size: 32pt;
-    color: #333;
-}
+
 
 #goals {
     display: grid;
@@ -275,12 +266,7 @@ body {
     max-width: 680px;
 } */
 
-h1 {
-    font-family: 'Raleway';
-    letter-spacing: 2px;
-    font-weight: bold;
-    
-}
+
 
 #hero-logo {
     width: 35%;

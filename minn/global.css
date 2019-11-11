@@ -76,3 +76,10 @@
     margin: 15px -30px;
     border: 1px solid var(--blue);
 }
+
+h1 {
+    font-family: 'Raleway';
+    letter-spacing: 2px;
+    font-weight: bold;
+    
+}
