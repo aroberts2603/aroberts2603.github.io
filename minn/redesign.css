@@ -7,6 +7,10 @@ body {
     height: 800px;
 }
 
+/* ============================================================ */
+/* ====================      Sidebar       ==================== */
+/* ============================================================ */
+
 .sidebar {
     background-color: #333;
     display: inline-block;
@@ -58,7 +62,6 @@ body {
 }
 
 #sidebar-container {
-    /* display: none; */
     width: 60px;
     transition: width 0.5s;
     overflow: hidden;
@@ -93,10 +96,102 @@ body {
     opacity: 0%;
 }
 
+/* ============================================================ */
+/* ====================     Main Page      ==================== */
+/* ============================================================ */
+
 #main-content {
     max-width: calc(100vw - 60px);
     margin-left: 60px;
 }
+
+/* ============================================================ */
+/* ====================      Overview      ==================== */
+/* ============================================================ */
+
+#overview {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+}
+
+.left {
+    border-right: 1px solid #333;
+    padding-right: 46px;
+}
+
+.right {
+    border-left: 1px solid #333;
+    padding-left: 46px;
+}
+
+.image-container {
+    padding: 16px 14px;
+    text-align: center;
+}
+
+.image-container img {
+    width: 180px;
+}
+
+.ele {
+    padding: 16px 14px;
+    text-align: center;
+}
+
+.ele-header {
+    text-align: center;
+    color: var(--blue);
+}
+
+.ele-text {
+    color: #333;
+    margin-top: 14px;
+    line-height: 1.4;
+}
+
+#c-logo {
+    width: 110px;
+    margin-right: 80px;
+}
+
+#github-logo {
+    width: 100px;
+}
+
+#intellij-logo {
+    width: 100px;
+    margin-right: 36px;
+    margin-left: 36px;
+}
+
+#vscode-logo {
+    width: 100px;
+}
+
+#scanner-image {
+    width: 440px;
+    margin-top: 12px;
+}
+
+#java-logo {
+    width: 80px;
+}
+
+#logo-explanation {
+    width: 410px;
+    margin-top: 20px;
+}
+
+.overview-hr {
+    border: 1px solid #333;
+    border-radius: 2px;
+    margin-bottom: 40px;
+}
+
+/* ============================================================ */
+/* ====================      Timeline      ==================== */
+/* ============================================================ */
 
 #timeline {
     display: grid;
