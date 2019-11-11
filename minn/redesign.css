@@ -92,3 +92,19 @@ body {
 #sidebar-container:hover #chevron {
     opacity: 0%;
 }
+
+#main-content {
+    max-width: calc(100vw - 60px);
+    margin-left: 60px;
+}
+
+#timeline {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    padding: 55px;
+}
+
+#timeline div {
+    border: 1px solid black;
+}
