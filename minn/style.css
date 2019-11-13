@@ -96,15 +96,7 @@ body {
     margin-right: -8px;
 }
 
-#communication-image {
-    width: 160px;
-    margin-top: 40px;
-}
 
-#timemanagement-image {
-    width: 160px;
-    margin-left: 60px;
-}
 
 #minn-git {
     float: left;
@@ -241,26 +233,7 @@ body {
 
 
 
-#goals {
-    display: grid;
-    grid-template-columns: 44% 44%;
-    column-gap: 12%;
-    color: #333;
-    /* text-align: center; */
-}
 
-.goal-entry {
-    padding: 4px;
-}
-
-.goal-entry p {
-    margin-top: 14px;
-}
-
-.goal-header {
-    color: var(--blue);
-    text-align: center;
-}
 /* 
 #timelines-container div {
     max-width: 680px;
@@ -274,26 +247,3 @@ body {
     margin-top: 220px;
 }
 
-.journal-title {
-    color: var(--blue);
-}
-
-.journal-subtitle {
-    color: var(--blue);
-}
-
-.journal-list {
-    margin-left: 35px;
-}
-
-.journal {
-    max-width: 1000px;
-    margin-left: calc(50% - 500px);
-}
-
-#enum-example {
-    width: 600px;
-    margin-left: calc(50% - 300px);
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
