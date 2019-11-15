@@ -116,3 +116,17 @@
 	margin-top: calc(50vh - 122.5px);
 	margin-left: 100px;
 } */
+
+body {
+	text-align: center;
+	background-color: #f7f7f7;
+}
+
+#under-construction {
+	margin-top: calc(50vh - 20.8px);
+}
+
+#under-construction p {
+	font-size: 18px;
+	color: #333;
+}
